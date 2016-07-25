@@ -3,8 +3,13 @@
     简化运维操作中的 ssh 批量执行指令，使用python中的paramiko和yaml模块实现
 ``` 
 
-#安装方式 
+#执行流程
+    config类读取yaml文件中待执行内容
+    actuator类为执行器
+    invoke类将config和actuator组装在一起
+    task类执行上面组装完毕的内容
 
+#安装方式 
 pip2.7 install Alcman
 
 #用法参考
