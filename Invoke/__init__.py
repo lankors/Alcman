@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 #coding=utf-8
 
+'''
+mail:wqc2008@gmail.com
+createtime:2016-7-20 18:00:00
+usege:
+    组装ymal文件与ssh执行器的信息
+    
+'''
+
+__all__ = ['invoke']
 
 class invoke(object):
 

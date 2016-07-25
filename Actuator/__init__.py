@@ -9,6 +9,15 @@ import socket
 import paramiko
 import traceback
 
+'''
+mail:wqc2008@gmail.com
+createtime:2016-7-20 18:00:00
+usege:
+    ssh执行器
+    
+'''
+
+__all__ = ['actuator']
 
 
 def trace_back():
@@ -62,7 +71,7 @@ class  actuator(object):
                             username =host['username'],
                             password =host['passwd'],
                             compress =True,
-                            timeout  =1
+                            timeout  =self.timeout 
                             )
             except:
                 self.ssh.connect(
@@ -71,7 +80,7 @@ class  actuator(object):
                         username =host['username'],
                         password =host['passwd'],
                         compress =True,
-                        timeout  =1
+                        timeout  =self.timeout 
                         )
                 
             #获取远程命令执行结果

@@ -3,7 +3,15 @@
 
 from multiprocessing.dummy import Pool as ThreadPool 
 
+'''
+mail:wqc2008@gmail.com
+createtime:2016-7-20 18:00:00
+usege:
+    根据组装参数来执行任务列表
+    
+'''
 
+__all__ = ['task']
 
 class task(object):
 
