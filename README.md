@@ -16,8 +16,8 @@ from Alcman.Task import task
 iv = invoke()
 iv.set_config(config(filename='./servers.yaml'))
 
-iv.set_actuator(actuator(id_rsa="/Users/playcrab/.ssh/id_rsa", 
-                        known_hosts="/Users/playcrab/.ssh/known_hosts", 
+iv.set_actuator(actuator(id_rsa="/root/.ssh/id_rsa", 
+                        known_hosts="/root/.ssh/known_hosts", 
                         timeout=30,
                         log_to_file="/tmp/ssh.log"))
 
