@@ -3,6 +3,16 @@
 
 import yaml
 
+'''
+mail:wqc2008@gmail.com
+createtime:2016-7-20 18:00:00
+usege:
+    设置yaml文件来读取host信息
+    
+'''
+
+__all__ = ['config']
+
 class config(object):
 
 
