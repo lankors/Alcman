@@ -1,5 +1,7 @@
 # Alcman
-    
+```
+    简化运维操作中的 ssh 批量执行指令，使用python中的paramiko和yaml模块实现
+``` 
 
 #安装方式 
 
