@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #coding=utf-8
 
-#from multiprocessing.dummy import Pool as ThreadPool 
+from multiprocessing.dummy import Pool as ThreadPool 
 
-from multiprocessing import Pool as ThreadPool 
+#from multiprocessing import Pool as ThreadPool 
 
 '''
 mail:wqc2008@gmail.com
