@@ -10,35 +10,37 @@
     task类执行上面组装完毕的内容
 
 #支持python版本
-###python2.7.11
-###python3.5 
+    ```
+    python2.7.11
+    python3.5 
+    ```
 
 
 #安装方式 
-依赖PyYAML-3.11、paramiko-2.0.2 版本关系不大
-
-pip2.7 install Alcman
-
+    ```
+    依赖PyYAML、paramiko
+    pip2.7 install Alcman
+    ```
 #用法参考
-```
-from Alcman.Config import config
-from Alcman.Actuator import actuator
-from Alcman.Invoke import invoke
-from Alcman.Task import task
+    ```
+    from Alcman.Config import config
+    from Alcman.Actuator import actuator
+    from Alcman.Invoke import invoke
+    from Alcman.Task import task
 
 
-iv = invoke()
-iv.set_config(config(filename='./servers.yaml'))
+    iv = invoke()
+    iv.set_config(config(filename='./servers.yaml'))
 
-iv.set_actuator(actuator(id_rsa="/root/.ssh/id_rsa", 
-                        known_hosts="/root/.ssh/known_hosts", 
-                        timeout=30,
-                        log_to_file="/tmp/ssh.log"))
+    iv.set_actuator(actuator(id_rsa="/root/.ssh/id_rsa", 
+                            known_hosts="/root/.ssh/known_hosts", 
+                            timeout=30,
+                            log_to_file="/tmp/ssh.log"))
 
-d = task(iv)
-#d.run()
-d.run(cmd="ls")
-print d.get_result()
-```
+    d = task(iv)
+    #d.run()
+    d.run(cmd="ls")
+    print d.get_result()
+    ```
 
 
