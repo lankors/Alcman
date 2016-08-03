@@ -14,7 +14,7 @@ iv.set_config(config(filename='./servers.yaml'))
 
 iv.set_actuator(actuator(id_rsa="/root/.ssh/id_rsa", 
                         known_hosts="/root/.ssh/known_hosts", 
-                        timeout=30,
+                        timeout=1,
                         log_to_file="/tmp/ssh.log"))
 
 d = task(iv)

@@ -9,6 +9,11 @@
     invoke类将config和actuator组装在一起
     task类执行上面组装完毕的内容
 
+#支持python版本
+###python2.7.11
+###python3.5 
+
+
 #安装方式 
 依赖PyYAML-3.11、paramiko-2.0.2 版本关系不大
 

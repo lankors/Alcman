@@ -71,7 +71,7 @@ class  actuator(object):
                             username =host['username'],
                             password =host['passwd'],
                             compress =True,
-                            timeout  = 3
+                            timeout  =1
 
                             )
             except:

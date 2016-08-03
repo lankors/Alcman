@@ -34,8 +34,8 @@ class config(object):
 
     def get_hosts(self):
    
-
-        return yaml.load(file(self.filename, 'r'))
+        #使用open兼容2.7 3.0
+        return yaml.load(open(self.filename, 'r'))
   
 '''
 if __name__ == '__main__':
