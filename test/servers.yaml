@@ -1,3 +1,3 @@
 hosts:
-- {cmd: ls,     outer_ip: 192.168.56.101, inner_ip: 192.168.56.101, passwd: '123456', username: root}
-- {cmd: uptime, outer_ip: 192.168.56.102, inner_ip: 192.168.56.101, passwd: '123456', username: root}
+- {cmd: ls, ip: 192.168.56.101, passwd: '123456', username: root}
+- {cmd: uptime, ip: 192.168.56.101, passwd: '123456', username: root}

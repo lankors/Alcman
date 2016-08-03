@@ -18,5 +18,6 @@ iv.set_actuator(actuator(id_rsa="/root/.ssh/id_rsa",
                         log_to_file="/tmp/ssh.log"))
 
 d = task(iv)
-d.run()
+#d.run()
+d.run(cmd="ls")
 print d.get_result()

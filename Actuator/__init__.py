@@ -63,25 +63,21 @@ class  actuator(object):
             self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 
-            #连接远程客户机器
+            #连接远程客户机器,这里需要用户自己保证IP可用，不用内外网的偿试
             try:
                 self.ssh.connect(
-                            hostname =host['inner_ip'],
+                            hostname =host['ip'],
                             port     =int(host['port']),
                             username =host['username'],
                             password =host['passwd'],
                             compress =True,
-                            timeout  =self.timeout 
+                            timeout  = 3
+
                             )
             except:
-                self.ssh.connect(
-                        hostname =host['outer_ip'],
-                        port     =int(host['port']),
-                        username =host['username'],
-                        password =host['passwd'],
-                        compress =True,
-                        timeout  =self.timeout 
-                        )
+                self.ssh.close()
+
+                return {'status':-1,'output':trace_back()}  
                 
             #获取远程命令执行结果
             stdin, stdout, stderr = self.ssh.exec_command(host['cmd'],bufsize=65535, timeout=self.timeout)

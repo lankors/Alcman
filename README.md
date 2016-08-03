@@ -10,6 +10,8 @@
     task类执行上面组装完毕的内容
 
 #安装方式 
+依赖PyYAML-3.11、paramiko-2.0.2 版本关系不大
+
 pip2.7 install Alcman
 
 #用法参考
@@ -29,7 +31,8 @@ iv.set_actuator(actuator(id_rsa="/root/.ssh/id_rsa",
                         log_to_file="/tmp/ssh.log"))
 
 d = task(iv)
-d.run()
+#d.run()
+d.run(cmd="ls")
 print d.get_result()
 ```
 

@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 #coding=utf-8
 
-from multiprocessing.dummy import Pool as ThreadPool 
+#from multiprocessing.dummy import Pool as ThreadPool 
+
+from multiprocessing import Pool as ThreadPool 
 
 '''
 mail:wqc2008@gmail.com
@@ -26,8 +28,12 @@ class task(object):
         return self.invoke.actuator.run(host)
         
 
-    def run(self):
+    def run(self,cmd=None):
         
+        if cmd!= None:
+            for host in  self.invoke.hosts:
+                host['cmd'] = cmd
+
         pool = ThreadPool(10) 
 
         self.result = pool.map(self.exec_cmd, self.invoke.hosts)
