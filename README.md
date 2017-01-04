@@ -24,7 +24,15 @@
     pip2.7 install Alcman
 
 ###用法参考
+server.yaml
+```
+    hosts:
+    - {cmd: ls, ip: 192.168.56.101, passwd: '123456', username: root}
+    - {cmd: uptime, ip: 192.168.56.101, passwd: '123456', username: root}
+```
 
+test.py
+```
     from Alcman.Config import config
     from Alcman.Invoke import invoke
     from Alcman.Task import task
@@ -37,6 +45,6 @@
     d = task(iv)
     d.run()
     print d.get_result()
-
+```
 
 
